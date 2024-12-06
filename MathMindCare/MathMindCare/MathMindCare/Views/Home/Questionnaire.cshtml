@@ -1,0 +1,195 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.Questionnaire
+@{
+    Questionnaire result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-label {
+            margin-bottom: 5px; /* Adjust this value as needed */
+            display: block;
+        }
+
+        .input-field {
+            margin-bottom: 10px; /* Adjust this value as needed */
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            // border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #dddddd;
+        }
+
+        .child {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+            .child input[type="text"], .child select {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+
+        .btn {
+            background-color: rgb(27, 110,194);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: rgb(27, 110,180);
+            }
+    </style>
+
+    <script src="~/js/questionnaire.js"></script>
+</head>
+<body>
+    <div id="container">
+        <input type="hidden" id="hdnQID" value=@Model.QID />
+        <h2>Questionnaire</h2>
+        <div class="child">
+            @{
+                int sl = 1;
+            }
+            @foreach (Questionnaire u in result.questionnaire)
+            {
+                <div class="child">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            @sl
+                        </div>
+
+                        <div class="col-sm-11">
+                            <label>@u.QUESTION</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1">
+                        </div>
+
+                        @if (u.ANS1 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (u.ANS == "1")
+                                {
+                                    <input type="radio" id="ans1_@u.QID" onclick="SaveQustionare('@u.QID','1','@u.POINTS1');" checked weight=@u.POINTS1 name="ans_@u.QID" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="ans1_@u.QID" onclick="SaveQustionare('@u.QID','1','@u.POINTS1');" weight=@u.POINTS1 name="ans_@u.QID"/>
+                                }
+                                <label for="ans_@u.QID">@u.ANS1</label>
+                            </div>
+                        }
+                        @if (u.ANS2 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (u.ANS == "2")
+                                {
+                                    <input type="radio" id="ans2_@u.QID" onclick="SaveQustionare('@u.QID','2','@u.POINTS2');" checked weight=@u.POINTS2 name="ans_@u.QID" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="ans2_@u.QID" onclick="SaveQustionare('@u.QID','2','@u.POINTS2');" weight=@u.POINTS2 name="ans_@u.QID" />
+                                }
+                                <label for="ans_@u.QID">@u.ANS2</label>
+                            </div>
+                        }
+                        @if (u.ANS3 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (u.ANS == "3")
+                                {
+                                    <input type="radio" id="ans3_@u.QID" onclick="SaveQustionare('@u.QID','3','@u.POINTS3');" checked weight=@u.POINTS3 name="ans_@u.QID" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="ans3_@u.QID" onclick="SaveQustionare('@u.QID','3','@u.POINTS3');" weight=@u.POINTS3 name="ans_@u.QID" />
+                                }
+                                <label for="ans_@u.QID">@u.ANS3</label>
+                            </div>
+                        }
+                        @if (u.ANS4 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (u.ANS == "4")
+                                {
+                                    <input type="radio" id="ans4_@u.QID" onclick="SaveQustionare('@u.QID','4','@u.POINTS4');" checked weight=@u.POINTS4 name="ans_@u.QID" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="ans4_@u.QID" onclick="SaveQustionare('@u.QID','4','@u.POINTS4');" weight=@u.POINTS4 name="ans_@u.QID" />
+                                }
+                                
+                                <label for="ans_@u.QID">@u.ANS4</label>
+                            </div>
+                        }
+                    </div>
+                    <div class="row" style="height:10Px">
+                    </div>
+                </div>
+                sl = sl + 1;
+
+            }
+
+            <div class="row">
+                @* <div class="col-sm-4">
+                    <button onclick="JSNextQuestion(@Model.QID)" class="btn">Save</button>
+                </div> *@
+                <div class="col-sm-4">
+                    <button onclick="Submitques(@Model.CHILDID)" class="btn">Submit</button>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div class="container">
+        <h1>Test Instructions</h1>
+        <p>This is a whiteboard testing. Read the below instructions carefully:</p>
+        <ol>
+            <li>In this testing the child needs to attend the test. </li>
+            <li>
+                This test is done for analyzing the child's analyzes and understanding of place values and solving arithmetic operation.
+
+            </li>
+            <li>
+                Based on the question given on the screen the child is required to pick the number from the shelf and tap it into the whiteboard appropriately.
+            </li>
+            
+            <li>After completing first question click save button.</li>
+           
+            <li>Stay calm and positive throughout the testing process. If your child becomes frustrated or anxious, offer reassurance and encouragement to help them stay focused.</li>
+
+        </ol>
+        <p>Are you ready to begin?</p>
+        <button class="button" onclick="startTest()">Take Test</button>
+    </div>
+
+    <script>
+        function startTest() {
+            // Redirect to the test page
+            window.location.href = "/Home/Whiteboard?ID=0";
+        }
+    </script>
+</body>
+</html>
+

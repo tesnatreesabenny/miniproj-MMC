@@ -1,0 +1,148 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Mvc;
+@using System.Diagnostics;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>@ViewData["Title"] - MathMindCare</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MathMindCare.styles.css" asp-append-version="true" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+   
+    <header>
+    @*     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MathMindCare</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                                <ul class="navbar-nav flex-grow-1">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="addchild">Add Child</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="nav-link text-dark" href="@Url.Action("Login", "Home", new { ID = "0" })">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+        </nav> *@
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0 ">
+            <a href="/Home/Index" class="navbar-brand">
+                <h1 class="m-0 text-primary"> <img src="~/img/reader.png" style="width:60Px;height:60Px;"/> MathMindCare</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                
+                
+                <div class="navbar-nav mx-auto">
+                    <a href="/Home/Index" class="nav-item nav-link">Home</a>
+                    @{
+                        @inject IHttpContextAccessor HttpContextAccessor
+                        var type1 = HttpContextAccessor.HttpContext.Session.GetString("USERTYPE");
+
+                        if (type1 != null && type1 != "")
+                        {
+                            if (type1 == "1")
+                            {
+                                <a href="/Home/addchild" class="nav-item nav-link">Manage Child</a>
+                            }
+                            else if (type1 == "2")
+                            {
+                                <a href="/Home/dashboard" class="nav-item nav-link">Dashboard</a>
+                                <a href="/Home/DoctorInfo" class="nav-item nav-link">Profile</a>
+                            }
+                            else if (type1 == "0")
+                            {
+                                <a href="/Home/ManageQuestionnaire" class="nav-item nav-link">Manage Questionnaire</a>
+                                <a href="/Home/ManageUsers" class="nav-item nav-link">Manage Users</a>
+                            }
+                        }
+                    }
+
+                   @*  <a href="about.html" class="nav-item nav-link active">About Us</a>
+                    <a href="classes.html" class="nav-item nav-link">Classes</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="facility.html" class="dropdown-item">School Facilities</a>
+                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
+                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
+                            <a href="appointment.html" class="dropdown-item">Make Appointment</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        </div>
+                    </div> *@
+                    <a href="/Home/Contact" class="nav-item nav-link">Contact Us</a>
+                </div>
+               
+                @{
+
+
+                    @inject IHttpContextAccessor HttpContextAccessor
+                    
+                    var user = HttpContextAccessor.HttpContext.Session.GetString("USERID");
+                    var name = HttpContextAccessor.HttpContext.Session.GetString("USERNAME");
+
+                    if (user != null && user!="")
+                    {
+
+                        <a href="@Url.Action("ProfileEdit", "Home")" class="nav-item nav-link">Welcome @name </a> 
+                        <a href="@Url.Action("Login", "Home", new { ID = "0" })" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Logout</a>
+                    }
+                    else
+                    {
+                        <a href="/Home/Login" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" style="margin-right: 5px";>Login</a>
+                        <a href="/Home/Register" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Register</a>
+
+                    }
+                }
+            </div>
+        </nav>
+        <!-- Navbar End -->
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   <!-- <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - MathMindCare - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,328 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.WhiteBoard
+@{
+    WhiteBoard result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Board</title>
+    <style>
+        /* Basic styling for the steps */
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+
+        .btn {
+            background-color: rgb(27, 110,194);
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+
+        .white_bg{
+            font-family: Arial,'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+            font-size:40Px;
+            background-color:white;
+            padding:3Px;
+            width:100%;
+            text-align:left;
+        }
+
+
+    </style>
+
+    <script src="~/js/whiteboard.js" defer></script>
+    <script src="~/js/whiteboardfn.js"></script>
+</head>
+<body style="background-image: url('/img/bgmaths.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div class="step-container">
+        <section class="tools-board" style="display:none">
+            <div class="row">
+                <label class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <img src="~/img/rectangle.svg" alt="">
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <img src="~/img/circle.svg" alt="">
+                        <span>Circle</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <img src="~/img/triangle.svg" alt="">
+                        <span>Triangle</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label class="title">Options</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush">
+                        <img src="~/img/brush.svg" alt="">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <img src="~/img/eraser.svg" alt="">
+                        <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="30" value="5">
+                    </li>
+                </ul>
+            </div>
+            <div class="row colors">
+                <label class="title">Colors</label>
+                <ul class="options">
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" id="color-picker" value="#4A98F7">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <input type="hidden" id="htnDrawNumber" value="" />
+        <div class="row">
+            @* <h2>Math Problems</h2> *@
+            @* <h3>@Model.WDQID</h3> *@
+            <input id="hdnquestionNumber"  type="hidden" value="@Model.WDQID" />
+            <div class="col-sm-12">
+            <span class="white_bg" id="questionText">@Model.WDQID. @Model.QUESTION @Model.LETTER1@Model.LETTER2 + @Model.LETTER3@Model.LETTER4 = </span>
+            </div>
+
+            <div class="col-sm-1" style="display:none">
+                <input type="text" value="@Model.LETTER1@Model.LETTER2" maxlength="2" id="txtaddNumber1" />
+            </div>
+            <div class="col-sm-1" style="display:none">
+                +
+            </div>
+            <div class="col-sm-1" style="display:none">
+                <input type="text" value="@Model.LETTER3@Model.LETTER4" maxlength="2" id="txtaddNumber2" />
+            </div>
+            <div class="col-sm-1" style="display:none">
+                <input type="text" value="@Model.LETTER5@Model.LETTER6" maxlength="2" id="txtaddNumber3" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-8" style="background-color:white" id="divCanvas">
+                <section class="drawing-board" style="width:100%;height:530Px;">
+                    <canvas id="drcanvas" style="width:100%;height:100%"></canvas>
+                </section>
+            </div>
+             <div class="col-sm-8" style="background-color:gray;display:none" id="divPreview">
+
+                <img id="imgPreview" />
+            </div> 
+
+            <div class="col-sm-4" style="background-color:deepskyblue">
+                <div class="row">
+                    <div class="col-sm-3">
+
+                        <input id="btn1" onclick="getNumber1(1)" type="image" src="../img/Numbers/1.png" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="btn2" onclick="getNumber1(2)" type="image" src="../img/Numbers/2.png" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="btn3" onclick="getNumber1(3)" type="image" src="../img/Numbers/3.png" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input id="btn4" onclick="getNumber1(4)" type="image" src="../img/Numbers/4.png" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="btn5" onclick="getNumber1(5)" type="image" src="../img/Numbers/5.png" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="btn5" onclick="getNumber1(6)" type="image" src="../img/Numbers/6.png" />
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input id="btn7" onclick="getNumber1(7)" type="image" src="../img/Numbers/7.png" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="btn8" onclick="getNumber1(8)" type="image" src="../img/Numbers/8.png" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="btn9" onclick="getNumber1(9)" type="image" src="../img/Numbers/9.png" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input id="btn0" onclick="getNumber1(0)" type="image" src="../img/Numbers/0.png" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="btn0" onclick="getNumber1('plus')" type="image" src="../img/Numbers/plus.png" />
+                    </div>
+                </div>
+                   
+                <div class="row buttons" style="margin-top:10Px;">
+
+                    <button type="button" class="clear-canvas" style="background-color: rgb(27, 110,194); color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; ">Clear Canvas</button>
+                    @if (@Model.COUNT == 1)
+                    {
+                        <button type="button" onclick="saveImage(@Model.WDQID);" class="save-img">Submit</button>
+
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @* <div class="col-sm-4">
+            </div> *@
+
+            <div class="col-sm-6" style="text-align:right;">
+                @if (Convert.ToInt16(@Model.WDQID) > 1)
+                {
+                    <button type="button" class="btn" id="previousButton" onclick="CPPrevQuestion(@Model.WDQID)" title="Previous Question">Previous</button>
+                }
+            </div>
+            <div class="col-sm-6">
+                @if (@Model.COUNT > 1 || @Model.WDQID == "1")
+                {
+                    <button type="button" class="btn" id="nextButton" onclick="CPNextQuestion(@Model.WDQID,0)" title="Next Question">Next</button>
+                }
+
+            </div>
+
+
+
+            @* <div class="col-sm-3">
+            </div> *@
+
+        </div>
+       @*  <div class="row buttons" style="margin-top:10Px;">
+            <button type="button" class="clear-canvas">Clear Canvas</button>
+            <button type="button" onclick="saveImage(@Model.WDQID);" class="save-img">Save As Image</button>
+        </div> *@
+
+    </div>
+
+     <script>
+        function CPPrevQuestion(QID) {
+
+            window.location.href = "/Home/Whiteboard?ID=" + QID + "&type=0";
+        }
+
+        function CPNextQuestion(QID,LastQID) {
+            debugger;
+            saveImage(QID);
+
+            
+        }
+
+        function saveImage(QID) {
+            debugger;
+            var fileData = new FormData();
+            var number1 = document.getElementById('txtaddNumber1').value;
+            var number2 = document.getElementById('txtaddNumber2').value;
+            var number3 = document.getElementById('txtaddNumber3').value;
+            
+            var WBQID = document.getElementById('hdnquestionNumber').value;
+            var n1 = '';
+            var n2 = '';
+            var n3 = '';
+            var n4 = '';
+            var n5 = '';
+            var n6 = '';
+
+            debugger;
+            if (number1.length == 1) {
+                n2 = number1;
+                n1 = '';
+            }
+            else if (number1.length == 2) {
+
+                n1 = number1.substring(0, 1);
+                n2 = number1.substring(1, 2);
+            }
+            if (number2.length == 1) {
+                n4 = number2;
+                n3 = '';
+            }
+            else if (number2.length == 2) {
+
+                n3 = number2.substring(0, 1);
+                n4 = number2.substring(1, 2);
+            }
+            if (number3.length == 1) {
+                n6 = number3;
+                n5 = '';
+            }
+            else if (number3.length == 2) {
+
+                n5 = number3.substring(0, 1);
+                n6 = number3.substring(1, 2);
+            }
+
+            var image = document.getElementById("drcanvas").toDataURL("image/png");
+            image = image.replace('data:image/png;base64,', '');
+            debugger;
+            fileData.append('n1', n1);
+            fileData.append('n2', n2);
+            fileData.append('n3', n3);
+            fileData.append('n4', n4);
+            fileData.append('n5', n5);
+            fileData.append('n6', n6);
+            fileData.append('imageData', image);
+            fileData.append('WBQID', WBQID);
+            var formURL = '/Whiteboard/SaveImage';
+            //var formURL = '/WhiteBoardApi/DetectImage';
+            /* start ajax submission process */
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+
+                    debugger;
+                    //if (data.Status == 'OK') {
+                    //alert(data.status);
+
+                    //document.getElementById('divCanvas').style.display = 'none';
+                    //document.getElementById('divPreview').style.display = 'block';
+                    //var img = document.getElementById('imgPreview');
+                    //img.src = '../img/TestImages/' + data.status.trim();
+
+                    window.location.href = "/Home/Whiteboard?ID=" + QID + "&type=1";
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    debugger;
+                    alert('Error occurred!');
+                }
+
+            });
+        }
+
+    </script>
+
+
+</body>
+</html>

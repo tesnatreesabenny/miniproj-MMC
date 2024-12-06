@@ -1,0 +1,78 @@
+﻿
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    
+}
+<style>
+
+
+    .login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 30px; /* Added margin for space above and below */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(27, 110,194);
+        color: #fff;
+        border: none;
+        margin-top: 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+<script src="~/js/users.js"></script>
+<body style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+<div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+        <div class="login-container">
+            <h2>MathMindCare Login</h2>
+
+            <input type="text" id="txtUserID" placeholder="Username" required><br>
+            <input type="password" id="txtPassword" placeholder="Password" required><br>
+
+            
+            <button type="button" onclick="JsValidateUser();">Login</button>
+            <!--<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>-->
+            <p style="margin-top: 15px;">New user? <a  asp-controller="Home" asp-action="Register">Create an account</a></p>
+        </div>
+
+    </div>
+    <div class="col-sm-4">
+    </div>
+</div>
+<script>
+        document.getElementById('txtPassword').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                JsValidateUser();
+            }
+        });
+</script>
+</body>
+

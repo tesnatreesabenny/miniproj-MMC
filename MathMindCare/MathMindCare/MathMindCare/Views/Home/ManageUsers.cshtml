@@ -1,0 +1,213 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.Users
+@{
+    Users result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+            font-family: sans-serif;
+        }
+
+.user-section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #e4e4e4;
+    padding-bottom: 10px;
+    font-family:sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background: #e4e4e4;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        
+        <section class="user-section">
+            <h2>Doctors</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     @foreach (Users u in result.userList)
+                    {
+                        @if (u.LOGINTYPE == "2")
+                        {
+                            <tr>
+                                <td>@u.USERID</td>
+                                <td>@u.NAME</td>
+                                <td>@u.EMAILID</td>
+                                <td>@u.ACTIVEDESC</td>
+                                @if (u.ACTIVE == "True")
+                                {
+                                    <td><button onclick="disableUser('@u.USERID','@u.ACTIVE')">Disable</button></td>
+                                }
+                                else
+                                {
+                                    <td><button onclick="disableUser('@u.USERID','@u.ACTIVE')">Enable</button></td>
+                                }
+
+                            </tr>
+                        }
+                   
+
+                    }
+                   
+                  
+                    
+                </tbody>
+            </table>
+        </section>
+
+        <section class="user-section">
+            <h2>Parents/Teachers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Users u in result.userList)
+                    {
+                        @if (u.LOGINTYPE == "1")
+                        {
+                            <tr>
+                                <td>@u.USERID</td>
+                                <td>@u.NAME</td>
+                                <td>@u.EMAILID</td>
+                                <td>@u.ACTIVEDESC</td>
+                                @if (u.ACTIVE == "True")
+                                {
+                                    <td><button onclick="disableUser('@u.USERID','@u.ACTIVE')">Disable</button></td>
+                                }
+                                else
+                                {
+                                    <td><button onclick="disableUser('@u.USERID','@u.ACTIVE')">Enable</button></td>
+                                }
+                            </tr>
+                        }
+
+
+                    }
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        function disableUser(id, status) {
+            debugger;
+            var fileData = new FormData();
+
+
+
+
+            fileData.append('UserID', id);
+            fileData.append('status', status);
+
+            var formURL = '/Login/DisableUser';
+
+            /* start ajax submission process */
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+
+                    debugger;
+                    alert(data);
+                    //    if (data == 'OK') {
+                    //        alert("Login Success");
+                    window.location.href = '/Home/ManageUsers';
+
+                    //    }
+                    //    else {
+
+                    //        alert("Login Failed");
+                    //    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    debugger;
+                    alert(errorThrown);
+                }
+
+            });
+        }
+    </script>
+</body>
+</html>

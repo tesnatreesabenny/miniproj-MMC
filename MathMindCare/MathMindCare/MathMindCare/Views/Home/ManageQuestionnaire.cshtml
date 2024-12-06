@@ -1,0 +1,195 @@
+﻿@*
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using MathMindCare.Models;
+
+@model MathMindCare.Models.Questionnaire
+@{
+    Questionnaire quest = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-label {
+            margin-bottom: 5px; 
+            display: block;
+        }
+
+        .input-field {
+            margin-bottom: 10px; 
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            // border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+       /*  th{
+            background-color: #dddddd;
+        } */
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #dddddd;
+        }
+
+        .child {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+            .child input[type="text"], .child select {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+
+        .btn {
+            /* background-color: rgb(27, 110,194); */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: rgb(27, 110,180);
+            }
+    </style>
+    
+    <script src="~/js/questionnaire.js"></script>
+</head>
+<body>
+    <div id="container">
+        <input type="hidden" value="@Model.QID" id="hdnQID" />
+
+        <div class="child">
+            <div class="row">
+                <div class="col-sm-12">
+                    <label class="input-label" for="txtques">Question:</label>
+                    <textarea id="txtques" rows="5" cols="100">@Model.QUESTION</textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <label class="input-label" for="txtopts">Options:</label>
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtopts1" value="@Model.ANS1" name="txtopts1">
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtopts2" value="@Model.ANS2" name="txtopts2">
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtopts3" value="@Model.ANS3" name="txtopts3">
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtopts4" value="@Model.ANS4" name="txtopts4">
+                </div>
+            </div>
+
+           @*  <div class="row">
+                <div class="col-sm-2">
+                    <label class="input-label" for="txtpts">Points:</label>
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtpts1" value="@Model.POINTS1" name="txtpts1">
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtpts2" value="@Model.POINTS2" name="txtpts2">
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtpts3" value="@Model.POINTS3" name="txtpts3">
+                </div>
+                <div class="col-sm-2">
+                    <input class="input-field" type="text" id="txtpts4" value="@Model.POINTS4" name="txtpts4">
+                </div>
+            </div> *@
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <button onclick="JSAddQuestionnaire()" class="btn" style="background-color: rgb(27, 110,194);">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Question List</h2>
+        </div>
+        <table>
+            <!--<tr<td><td>Sl No.</td></td><td>Question</td><td></td><td></td></tr> -->
+            <tr>
+                <th>Sl No.</th>
+                <th>Question</th>
+            </tr>
+            @{
+                int sl = 1;
+            }
+
+            @foreach (Questionnaire u in quest.questionnaire)
+            {
+                <tr>
+                    <td>@sl</td>
+                    <td>@u.QUESTION</td>
+
+                    <td><button class="btn" onclick="JSEditQuestion(@u.QID)" style="background-color:#F5783A">Edit</button></td>
+                    <td><button class="btn" onclick="JSDelQues(@u.QID)" style="background-color:#67C9F1">Delete</button></td>
+                    @{
+                        sl = sl + 1;
+                    }
+
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</body>
+
+
+
+</html>

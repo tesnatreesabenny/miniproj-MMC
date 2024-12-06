@@ -1,0 +1,225 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.ChildProfile
+@{
+    ChildProfile result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /*         input[type="text"],
+                        input[type="password"],
+                        button[type="button"] {
+                            width: 100%;
+                            padding: 10px;
+                            margin-bottom: 10px;
+                            border: 1px solid #ccc;
+                            border-radius: 3px;
+                            box-sizing: border-box; */
+        }
+
+        .input-label {
+            margin-bottom: 5px; /* Adjust this value as needed */
+            display: block;
+        }
+
+        .input-field, input[type="text"] {
+            margin-bottom: 10px; /* Adjust this value as needed */
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th{
+            background-color: #AED6F1;
+        }
+
+        td {
+            /* border: 1px solid #dddddd; */
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd; 
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #dddddd;
+        }
+
+        .child {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+            .child input[type="text"], .child select {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+
+        .btn1 {
+            /* background-color: rgb(27, 110,194); */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn2 {
+            /* background-color: rgb(27, 110,194); */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /*     .btn1:hover {
+            background-color: #E67E22;
+            }
+
+         .btn2:hover {
+            background-color: #2ECC71;
+        } */
+
+        .topnav {
+            overflow: hidden;
+            background-color: #e9e9e9;
+        } 
+
+
+
+
+
+        .searchbtn {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+        .searchtext {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+       /*  .topnav input[type=text] {
+            border: 1px solid #ccc;
+        } */
+
+        }
+    </style>
+    <script src="~/js/addchild.js"></script>
+
+</head>
+<body style="background-image: url('/img/bgmaths.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div id="container">
+
+        <input type="hidden" id="hdnChildID" value=@Model.CHILDID />
+        @* <h2>Dashboard</h2> *@
+       @*  <div class="child">
+      
+            
+               
+            <div class="row">
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+
+            </div>
+        </div> *@
+
+        <div>
+            <h2>Patient Details & Reports</h2>
+        </div>
+
+        <table>
+            <tr><th></th><th>Name</th><th>Address</th><th>Phone</th><th>DOB</th><th>Email</th><th></th><th></th></tr>
+            @foreach (ChildProfile u in result.childProfileList)
+            {
+                <tr>
+                    @if (@u.VIEWED == "1")
+                    {
+                        <td></td>
+                    }
+                    else
+                    {
+                        <td><img src="~/img/newico.gif" style="width:85px;height:45Px" /></td>
+                    }
+                    <td>@u.NAME</td>
+                    <td>@u.ADDRESS</td>
+                    <td>@u.PHNO</td>
+                    <td>@u.DOB</td>
+                    <td>@u.EMAIL</td>
+                    <td><button class="btn1" onclick="ViewResult(@u.CHILDID)" style="background-color:#F5783A">View Result</button></td>
+                    <td><button class="btn2" onclick="LoadChat(@u.CHILDID)" style="background-color:#79F681">Message</button></td>
+                    
+                </tr>
+            }
+
+        </table>
+
+    </div>
+    
+
+
+
+<script>
+    function ViewResult(childid) {
+        
+        window.location.href = '/Home/Result?ID=' + childid;
+    }
+        function LoadChat(ChildID) {
+            window.location.href = '/Home/Messages?ID=' + ChildID;
+
+        }
+
+
+</script>
+</body>
+
+</html>

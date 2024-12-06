@@ -1,0 +1,290 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.ChildProblems
+@{
+    ChildProblems result = Model;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Problems</title>
+    <style>
+        .question-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .btn {
+            background-color: rgb(26, 109,190);
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: rgb(27, 110,180);
+            }
+
+        /*  .question-navigation {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .question-number {
+                    margin: 0;
+                    padding: 5px 10px;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                }
+
+                    .question-number.active {
+                        background-color: #007bff;
+                        color: #fff;
+                    }
+         */
+
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body style="background-image: url('/img/bgmaths.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div>
+
+        <form id="mathForm">
+            <div id="questionContainer" class="question-container">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar" style="width:@Model.PERCENT"></div>
+                </div>
+                @* <h2>Math Problems</h2> *@
+
+                @* <h3>@Model.CURCOUNT / @Model.MAXCOUNT</h3> *@
+                <input id="hdnquestionNumber" type="hidden" value=" @Model.QID" />
+                <h2 id="questionText" style="font-family:sans-serif;">@Model.QUESTION</h2>
+                @if (@Model.IMAGEFIELD != "")
+                {
+                    <img src="~/img/questions/@Model.IMAGEFIELD" />
+                }
+                @if (Model.TEXTCORRECTANS != "")
+                {
+                    <br />
+                    <br />
+                    <input type="hidden" ID="hdnQType" value="0" />
+                    <label for="answer">Your Answer:</label>
+                    <input type="text" id="txtanswer" value="@Model.ANS" weight="@Model.TEXTCORRECTANS" name="answer" required>
+                }
+                else
+                {
+                    <input type="hidden" ID="hdnQType" value="1" />
+                    <div class="row">
+                        @if (Model.ANS1 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (Model.ANS == "1")
+                                {
+                                    <input type="radio" id="OptAns1" weight=@Model.MULTCORRECTANS checked name="OptAns1" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="OptAns1" weight=@Model.MULTCORRECTANS name="OptAns1" />
+                                }
+                              
+                                <label for="OptAns1">@Model.ANS1</label>
+                            </div>
+                        }
+                        @if (Model.ANS2 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (Model.ANS == "2")
+                                {
+                                    <input type="radio" id="OptAns2" weight=@Model.MULTCORRECTANS checked name="OptAns1" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="OptAns2" weight=@Model.MULTCORRECTANS name="OptAns1" />
+                                }
+                                <label for="OptAns2">@Model.ANS2</label>
+                            </div>
+                        }
+                        @if (Model.ANS3 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (Model.ANS == "3")
+                                {
+                                    <input type="radio" id="OptAns3" weight=@Model.MULTCORRECTANS checked name="OptAns1" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="OptAns3" weight=@Model.MULTCORRECTANS name="OptAns1" />
+                                }
+                                
+                                <label for="OptAns3">@Model.ANS3</label>
+                            </div>
+                        }
+                        @if (Model.ANS4 != "")
+                        {
+                            <div class="col-sm-2">
+                                @if (Model.ANS == "4")
+                                {
+                                    <input type="radio" id="OptAns4" weight=@Model.MULTCORRECTANS checked name="OptAns1" />
+                                }
+                                else
+                                {
+                                    <input type="radio" id="OptAns4" weight=@Model.MULTCORRECTANS name="OptAns1" />
+                                }
+                                
+                                <label for="OptAns4">@Model.ANS4</label>
+                            </div>
+                        }
+                    </div>
+                }
+
+                <div class="row">
+                    <div class="col-sm-5">
+                    </div>
+
+                    <div class="col-sm-1" style="text-align:right; margin-right:5Px">
+                        @if (Convert.ToInt16(@Model.QID) > 1)
+                        {
+                            <button type="button" class="btn" id="previousButton" onclick="CPPrevQuestion(@Model.QID)" title="Previous Question">Previous</button>
+                        }
+                    </div>
+                    <div class="col-sm-1">
+                        @if (@Model.COUNT > 1 || @Model.QID == "1")
+                        {
+                            <button type="button" class="btn" id="nextButton" onclick="CPNextQuestion(@Model.QID)" title="Next Question">Next</button>
+                        }
+
+                    </div>
+                    <div class="col-sm-5">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-5" style="height:20Px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                    </div>
+
+                    <div class="col-sm-1" style="text-align:right">
+                        @if (Model.COUNT == 1 && Model.QID!="1")
+                        {
+                            <button type="button" class="btn" onclick="CPNextQuestion(@Model.QID,1)" id="submitButton" title="Submit">Submit</button>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function CPPrevQuestion(QID) {
+
+            window.location.href = "/Home/ChildProblems?ID=" + QID + "&type=0";
+        }
+       
+
+
+        function CPNextQuestion(QID,LastQID) {
+            var fileData = new FormData();
+            debugger;
+            var QID = $('#hdnquestionNumber').val();
+            var ANS = "";
+            var CORRECTANS = "";
+            if ($('#hdnQType').val() == '0') {
+                ANS = $('#txtanswer').val().trim();
+                CORRECTANS = $('#txtanswer').attr('weight');
+            }
+            else {
+                if ($('#OptAns1').is(':checked')) {
+                    ANS = 1;
+                }
+                if ($('#OptAns2').is(':checked')) {
+                    ANS = 2;
+                }
+                if ($('#OptAns3').is(':checked')) {
+                    ANS = 3;
+                }
+                if ($('#OptAns4').is(':checked')) {
+                    ANS = 4;
+                }
+                CORRECTANS = $('#OptAns1').attr('weight');
+                
+            }
+            if (ANS=="") {
+                alert("Select answer");
+                return;
+            }
+
+            fileData.append('QID', QID);
+            fileData.append('ANS', ANS);
+            fileData.append('CORRECTANS', CORRECTANS);
+
+
+            var formURL = '/ChildProblem/AddCPTestResult';
+
+            /* start ajax submission process */
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+                    debugger;
+                    if (LastQID==1)
+                        window.location.href = '/Home/InstructionsWB?ID=0';
+                    else
+                        window.location.href = "/Home/ChildProblems?ID=" + QID + "&type=1";
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    debugger;
+                    alert(errorThrown);
+                }
+
+            });
+
+            
+        }
+
+    </script>
+</body>
+</html>

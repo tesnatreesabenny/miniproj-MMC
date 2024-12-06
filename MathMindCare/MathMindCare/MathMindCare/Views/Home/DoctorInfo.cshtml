@@ -1,0 +1,187 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.DoctorProfile
+@{
+    DoctorProfile result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+    @*     <link rel="stylesheet" href="styles.css">
+    *@
+    <style>
+        body {
+            /* font-family: Arial, sans-serif;
+                    margin: 20px,20px,20px,20px;
+                    padding: 20px;
+                 justify-content: center;
+                align-items: center;
+                height: 100vh;
+                 background-color: #f4f4f4; */
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            /*             justify-content: center;
+         */ align-items: center;
+        }
+
+        .profile-container {
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 7px;
+            overflow: hidden;
+            /* max-width: 1000px; */
+            height: auto;
+            width: 100%;
+            margin: 30px;
+        }
+
+        .profile-photo {
+            flex: 1;
+            background-color: #eaeaea;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+            .profile-photo img {
+                width: 150px;
+                height: 150px;
+                /*                 border-radius: 50%;
+         */ object-fit: cover;
+                margin: 10px;
+            }
+
+        .profile-details {
+            flex: 2;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* .detail-box {
+                margin-bottom: 10px;
+            }
+
+                .detail-box label {
+                    font-weight: bold;
+                }
+
+                .detail-box input {
+                    margin-left: 10px;
+                    padding: 5px;
+                    width: calc(100% - 20px);
+                    box-sizing: border-box;
+                } */
+
+        .detail-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+            .detail-box label {
+                font-weight: bold;
+                margin-right: 10px;
+                min-width: 150px; /* Adjust based on your needs */
+            }
+
+            .detail-box input {
+                padding: 5px;
+                flex: 1;
+                box-sizing: border-box;
+            }
+
+        .edit-button, .save-button {
+            align-self: flex-start;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+            .edit-button:hover, .save-button:hover {
+                background-color: #0056b3;
+            }
+
+        .save-button {
+            background-color: #28a745;
+        }
+
+            .save-button:hover {
+                background-color: #218838;
+            }
+
+    </style>
+</head>
+<body style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-4 profile-container">
+                    <div class="profile-photo">
+                        <img src=@Model.PHOTO alt="Doctor Photo">
+                    </div>
+                    <div class="profile-details">
+                        <div class="detail-box">
+                            <label>Name:</label>
+                            <input type="text" id="name" value="@Model.NAME" disabled>
+                        </div>
+                        <div class="detail-box">
+                            <label>Hospital Address:</label>
+                            <textarea rows="4" cols="28" id="hospital-address" disabled>@Model.CLINICADDRESS</textarea>
+                        </div>
+                        <div class="detail-box">
+                            <label>Specialization:</label>
+                            <input type="text" id="specialization" value="@Model.SPECIALIZATION" disabled>
+                        </div>
+                        <div class="detail-box">
+                            <label>Experience (Years):</label>
+                            <input type="text" id="experience" value="@Model.EXPERIENCE" disabled>
+                        </div>
+                        <div class="detail-box">
+                            <label>Address:</label>
+                            <textarea rows="4" cols="28" id="address" disabled>@Model.ADDRESS</textarea>
+                        </div>
+                        <div class="detail-box">
+                            <label>Phone:</label>
+                            <input type="text" id="phone" value="@Model.PHONE" disabled>
+                        </div>
+                        <div class="detail-box">
+                            <label>Email:</label>
+                            <input type="text" id="email" value="@Model.EMAILID" disabled>
+                        </div>
+                        <button class="edit-button" onclick="editProfile()">Edit</button>
+                        <button class="save-button" onclick="saveProfile()" style="display: none;">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <script>
+
+        function editProfile() {
+            window.location.href = '/Home/Doctor';
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+

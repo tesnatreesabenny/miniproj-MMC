@@ -1,0 +1,146 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.Questionnaire
+@{
+    Questionnaire result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Program</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .collapsible-link {
+            display: inline;
+            color: inherit; /* Use the same color as the surrounding text */
+            text-decoration: none; /* Remove underline */
+            cursor: pointer;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .explanation h2 {
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .explanation p, .explanation ul {
+            color: #555;
+        }
+
+        .training-levels {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .level-box {
+            position: relative;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            transition: max-height 0.3s ease, padding-bottom 0.3s ease;
+            max-height: 70px; /* initial height */
+            overflow: hidden;
+        }
+
+            .level-box h3 {
+                margin: 0;
+                color: #333;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .level-box:hover {
+                background-color: #e0f7fa;
+                border-color: #00bcd4;
+                max-height: 200px; /* expanded height */
+                padding-bottom: 20px;
+            }
+
+        .level-description {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .level-box:hover .level-description {
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div class="container">
+        <h1>Training Program Overview</h1>
+        <section class="explanation">
+            <h2>Who Can Take This Training?</h2>
+            <p>This training is specially for children who are diagnosed with dyscalculia. It is designed for children who need additional support in improving their numerical and mathematical skills.</p>
+
+            <h2>Benefits of Taking This Training</h2>
+            <ul>
+                <li>The training is divided into three levels—Foundations, Intermediate, and Advanced—ensuring a gradual and comprehensive skill-building process.</li>
+                <li>Each level includes a task that is clear and goal-oriented, making learning fun and effective.</li>
+                <li>Helps in developing basic number recognition, arithmetic, problem-solving, and higher-level math concepts.</li>
+                @* <li>Gain practical experience</li> *@
+            </ul>
+
+            <h2>Training Levels</h2>
+            <p>Our training program is divided into three levels:</p>
+            <div class="training-levels">
+                <div class="level-box" id="level-1">
+                    <h3><a href="/Home/Practice1" class="collapsible-link">Level 1</a></h3>
+                    <div class="level-description" id="description-1">
+                        <p style="color:#922B21 ">
+                            Connect the dots in numerical order to reveal a picture! Start with dot "1" and draw a line to dot "2".
+                            Continue connecting the dots in sequence until you complete the image. This activity helps you learn numbers and their order while having fun!
+                        </p>
+                    </div>
+                </div>
+                <div class="level-box" id="level-2">
+                    <h3><a href="/Home/Noline" class="collapsible-link">Level 2</a></h3>
+                    <div class="level-description" id="description-2">
+                        <p style="color:#922B21 ">
+                            In Level 2, you will explore number sequences on a number line. You can choose to fill in the empty spaces with even numbers,
+                            odd numbers, or create your own custom sequence. Start from the designated starting point and continue filling in the spaces according to your selected sequence type. 
+                           This activity enhances your understanding of number patterns and sequences in an interactive and educational manner.</p>
+                    </div>
+                </div>
+                <div class="level-box" id="level-3">
+                    <h3><a href="/Home/Practice3" class="collapsible-link">Level 3</a></h3>
+                    <div class="level-description" id="description-3">
+                        <p style ="color:#922B21 ">
+                            In Level 3, you'll enjoy a fun balloon pop game where you can choose any four arithmetic operations. You'll be presented with arithmetic problems,
+                           and your task is to pop the balloon that contains the correct answer. This game allows you to practice addition, 
+                           subtraction, multiplication, or division while having fun popping balloons and improving your math skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

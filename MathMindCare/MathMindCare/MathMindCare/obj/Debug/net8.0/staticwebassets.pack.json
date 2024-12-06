@@ -1,0 +1,1049 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MathMindCare.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MathMindCare.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\0.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\0.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\1.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\2.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\2.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\3.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\3.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\4.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\4.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\5.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\5.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\6.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\6.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\7.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\7.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\8.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\8.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\9.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\9.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Numbers\\plus.png",
+      "PackagePath": "staticwebassets\\img\\Numbers\\plus.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-blue-sprite.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-blue-sprite.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-favicon.ico",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-favicon.ico"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-green-sprite.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-green-sprite.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-orange-sprite.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-orange-sprite.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-pink-sprite.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-pink-sprite.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-purple-cropped.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-purple-cropped.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-purple-sprite.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-purple-sprite.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-red-sprite.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-red-sprite.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\balloon-yellow-sprite.png",
+      "PackagePath": "staticwebassets\\img\\Practice3\\balloon-yellow-sprite.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\pin.svg",
+      "PackagePath": "staticwebassets\\img\\Practice3\\pin.svg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\sounds\\deflate.mp3",
+      "PackagePath": "staticwebassets\\img\\Practice3\\sounds\\deflate.mp3"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\sounds\\high-score.mp3",
+      "PackagePath": "staticwebassets\\img\\Practice3\\sounds\\high-score.mp3"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\sounds\\pop.mp3",
+      "PackagePath": "staticwebassets\\img\\Practice3\\sounds\\pop.mp3"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\sounds\\unlucky.mp3",
+      "PackagePath": "staticwebassets\\img\\Practice3\\sounds\\unlucky.mp3"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Practice3\\sounds\\well-done.mp3",
+      "PackagePath": "staticwebassets\\img\\Practice3\\sounds\\well-done.mp3"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\FLOWERS.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\FLOWERS.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\Greater.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\Greater.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\add1.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\add1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\addmiss.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\addmiss.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\addmiss1.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\addmiss1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\dotimage.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\dotimage.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\dots1.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\dots1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\dots2.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\dots2.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\dots3.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\dots3.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\dots4.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\dots4.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\fishimg.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\fishimg.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\missno.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\missno.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\missno1.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\missno1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\missno2.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\missno2.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\mul.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\mul.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\mul1.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\mul1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\numlarger.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\numlarger.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\numsmall.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\numsmall.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\patternnum.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\patternnum.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\sub1.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\sub1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\treeimg.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\treeimg.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\Questions\\trucks.png",
+      "PackagePath": "staticwebassets\\img\\Questions\\trucks.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_191922.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_191922.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_192148.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_192148.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_192859.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_192859.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_194303.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_194303.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_214214.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_214214.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_214307.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_214307.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_222813.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_222813.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-05-2024_222944.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-05-2024_222944.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-06-2024_112342.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-06-2024_112342.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-06-2024_112413.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-06-2024_112413.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-06-2024_114438.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-06-2024_114438.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-06-2024_114447.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-06-2024_114447.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-07-2024_064120.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-07-2024_064120.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-07-2024_064148.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-07-2024_064148.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-07-2024_075022.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-07-2024_075022.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-07-2024_075044.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-07-2024_075044.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-07-2024_075046.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-07-2024_075046.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\02-07-2024_075049.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\02-07-2024_075049.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_092336.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_092336.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_092421.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_092421.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_093637.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_093637.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_093700.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_093700.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_094215.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_094215.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_094243.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_094243.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_100620.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_100620.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_100803.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_100803.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_104856.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_104856.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_104942.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_104942.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_114909.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_114909.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\03-05-2024_115001.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\03-05-2024_115001.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\04-07-2024_091407.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\04-07-2024_091407.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\04-07-2024_092743.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\04-07-2024_092743.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\04-07-2024_092823.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\04-07-2024_092823.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\04-07-2024_092903.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\04-07-2024_092903.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\04-07-2024_110934.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\04-07-2024_110934.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_070321.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_070321.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_070407.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_070407.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_070411.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_070411.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_070414.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_070414.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_070558.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_070558.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_090919.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_090919.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_091002.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_091002.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_091004.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_091004.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_091007.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_091007.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_092038.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_092038.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_092105.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_092105.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_092107.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_092107.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_092109.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_092109.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_093634.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_093634.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_094035.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_094035.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_094242.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_094242.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_095402.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_095402.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_095412.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_095412.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_095456.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_095456.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_095503.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_095503.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_113543.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_113543.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_113730.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_113730.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_113734.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_113734.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_113738.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_113738.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_113743.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_113743.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_114849.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_114849.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_114922.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_114922.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_114948.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_114948.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_115026.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_115026.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_163552.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_163552.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_163624.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_163624.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_203808.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_203808.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\05-07-2024_203852.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\05-07-2024_203852.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\06-07-2024_062618.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\06-07-2024_062618.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\06-07-2024_062656.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\06-07-2024_062656.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\11-06-2024_223143.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\11-06-2024_223143.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\11-06-2024_223219.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\11-06-2024_223219.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\13-05-2024_222706.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\13-05-2024_222706.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\13-05-2024_222750.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\13-05-2024_222750.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_194022.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_194022.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_194045.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_194045.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_194717.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_194717.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_194723.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_194723.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_195009.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_195009.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_195031.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_195031.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_195452.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_195452.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_195457.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_195457.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_200807.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_200807.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_200814.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_200814.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_202209.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_202209.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\14-05-2024_202227.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\14-05-2024_202227.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\28-05-2024_204221.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\28-05-2024_204221.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\28-05-2024_204304.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\28-05-2024_204304.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\28-05-2024_204740.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\28-05-2024_204740.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\TestImages\\28-05-2024_204810.png",
+      "PackagePath": "staticwebassets\\img\\TestImages\\28-05-2024_204810.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\about-1.jpg",
+      "PackagePath": "staticwebassets\\img\\about-1.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\about-2.jpg",
+      "PackagePath": "staticwebassets\\img\\about-2.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\about-3.jpg",
+      "PackagePath": "staticwebassets\\img\\about-3.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\appointment.jpg",
+      "PackagePath": "staticwebassets\\img\\appointment.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\arrow1.png",
+      "PackagePath": "staticwebassets\\img\\arrow1.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\background_cleanup.jpg",
+      "PackagePath": "staticwebassets\\img\\background_cleanup.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\bg-header-bottom.png",
+      "PackagePath": "staticwebassets\\img\\bg-header-bottom.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\bg-header-top.png",
+      "PackagePath": "staticwebassets\\img\\bg-header-top.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\bgchat.jpg",
+      "PackagePath": "staticwebassets\\img\\bgchat.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\bglogin1.jpg",
+      "PackagePath": "staticwebassets\\img\\bglogin1.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\bgmaths.jpg",
+      "PackagePath": "staticwebassets\\img\\bgmaths.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\brush.svg",
+      "PackagePath": "staticwebassets\\img\\brush.svg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\call-to-action.jpg",
+      "PackagePath": "staticwebassets\\img\\call-to-action.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\chatbox.png",
+      "PackagePath": "staticwebassets\\img\\chatbox.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\circle.svg",
+      "PackagePath": "staticwebassets\\img\\circle.svg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\classes-1.jpg",
+      "PackagePath": "staticwebassets\\img\\classes-1.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\classes-2.jpg",
+      "PackagePath": "staticwebassets\\img\\classes-2.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\classes-3.jpg",
+      "PackagePath": "staticwebassets\\img\\classes-3.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\classes-4.jpg",
+      "PackagePath": "staticwebassets\\img\\classes-4.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\classes-5.jpg",
+      "PackagePath": "staticwebassets\\img\\classes-5.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\classes-6.jpg",
+      "PackagePath": "staticwebassets\\img\\classes-6.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\download.jpg",
+      "PackagePath": "staticwebassets\\img\\download.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\edit.png",
+      "PackagePath": "staticwebassets\\img\\edit.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\eraser.svg",
+      "PackagePath": "staticwebassets\\img\\eraser.svg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\newico.gif",
+      "PackagePath": "staticwebassets\\img\\newico.gif"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\noimages.png",
+      "PackagePath": "staticwebassets\\img\\noimages.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\reader.png",
+      "PackagePath": "staticwebassets\\img\\reader.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\rectangle.svg",
+      "PackagePath": "staticwebassets\\img\\rectangle.svg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\rightarrow.png",
+      "PackagePath": "staticwebassets\\img\\rightarrow.png"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\img\\team-2.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\testimonial-3.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-3.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\triangle.svg",
+      "PackagePath": "staticwebassets\\img\\triangle.svg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\img\\user.jpg"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice1.js",
+      "PackagePath": "staticwebassets\\js\\Practice1.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\animation.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\animation.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\audio.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\audio.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\display.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\display.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\events.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\events.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\game-logic.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\game-logic.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\initialisation.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\initialisation.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\mail.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\mail.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\maths.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\maths.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\spec\\displaySpec.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\spec\\displaySpec.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Practice3\\spec\\mathsSpec.js",
+      "PackagePath": "staticwebassets\\js\\Practice3\\spec\\mathsSpec.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Questionnaire.js",
+      "PackagePath": "staticwebassets\\js\\Questionnaire.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Questionnaireold.js",
+      "PackagePath": "staticwebassets\\js\\Questionnaireold.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\Users.js",
+      "PackagePath": "staticwebassets\\js\\Users.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\WhiteBoardFn.js",
+      "PackagePath": "staticwebassets\\js\\WhiteBoardFn.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\addchild.js",
+      "PackagePath": "staticwebassets\\js\\addchild.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\js\\whiteboard.js",
+      "PackagePath": "staticwebassets\\js\\whiteboard.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\MathMindCare\\MathMindCare\\MathMindCare\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MathMindCare.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MathMindCare.props",
+      "PackagePath": "build\\MathMindCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MathMindCare.props",
+      "PackagePath": "buildMultiTargeting\\MathMindCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MathMindCare.props",
+      "PackagePath": "buildTransitive\\MathMindCare.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

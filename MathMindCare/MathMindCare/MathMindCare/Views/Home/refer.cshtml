@@ -1,0 +1,230 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.DoctorProfile
+@{
+    DoctorProfile result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+
+        .input-label {
+            margin-bottom: 5px; /* Adjust this value as needed */
+            display: block;
+        }
+
+        .input-field, input[type="text"] {
+            margin-bottom: 10px; /* Adjust this value as needed */
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #92CFE7;
+        }
+
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #dddddd;
+        }
+
+        .child {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+            .child input[type="text"], .child select {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+
+        .btn {
+            background-color: #58D68D;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #229954;
+            }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #e9e9e9;
+        }
+
+
+
+
+
+        .searchbtn {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+        .searchtext {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+
+    
+    </style>
+    <script src="~/js/addchild.js"></script>
+
+</head>
+<body style="background-image: url('/img/bgmaths.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div id="container">
+
+        <input type="hidden" id="hdnChildID" value=@Model.CHILDID />
+       
+       @*  <div class="child">
+
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
+                </div>
+
+            </div>
+        </div> *@
+
+        <div>
+            <h3>Available Doctors</h3>
+        </div>
+
+        <table>
+            <tr><th></th><th>Name</th><th>Clinic Address</th><th>Specialization</th><th>Experiance</th><th>Phone</th><th>E-Mail</th><th></th></tr>
+            @foreach (DoctorProfile u in result.doctorProfile)
+            {
+                <tr>
+                    @if (@u.PHOTO == "")
+                    {
+                        <td></td>
+                    }
+                    else
+                    {
+                        <td><img src=@u.PHOTO style="width:70px;height:80Px" /></td>
+                    }
+                    <td>@u.NAME</td>
+                    <td>@u.CLINICADDRESS</td>
+                    <td>@u.SPECIALIZATION</td>
+                    <td>@u.EXPERIENCE</td>
+                    <td>@u.PHONE</td>
+                    <td>@u.EMAILID</td>
+                    <td><button class="btn" onclick="Assign('@u.USERID','@Model.CHILDID')">Refer</button></td>
+
+                </tr>
+            }
+
+        </table>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="btn" style="background-color:#5DADE2" onclick="Backtoh()">Back to page</button>
+            </div>
+        </div>
+      
+
+
+    </div>
+
+
+
+<script>
+    function Assign(USERID, CHILDID) {
+        var id = $('#ddlDoctor').val();
+        var fileData = new FormData();
+        fileData.append('USERID', USERID);
+        fileData.append('CHILDID', CHILDID);
+        var formURL = '/ChildProblem/AddReferrals';
+
+        /* start ajax submission process */
+        $.ajax({
+            url: formURL,
+            type: "POST",
+            data: fileData,
+            processData: false,
+            contentType: false,
+            success: function (data, textStatus, jqXHR) {
+                debugger;
+                alert(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                debugger;
+                alert(errorThrown);
+            }
+
+        });
+    }
+
+    function Backtoh(){
+            var CHILDID = document.getElementById('hdnChildID').value;
+            window.location.href = '/Home/levels?id=' + CHILDID;
+       
+            
+    }
+
+
+</script>
+</body>
+
+</html>

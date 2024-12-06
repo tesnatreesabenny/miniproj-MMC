@@ -1,0 +1,286 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.Messages
+@{
+    Messages result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step-by-Step Template</title>
+    <style>
+        /* Basic styling for the steps */
+        .step-container {
+            width: 100%;
+            margin: 15px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+
+        /* .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 5px;
+            max-width: 400px;
+            width: 100%;
+            margin:20Px,10Px,0Px,20Px;
+        } */
+
+        /* .search-input {
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            flex: 1;
+        }
+
+        .search-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .search-button:hover {
+                background-color: #0056b3;
+            } */
+
+        #send-button {
+            padding: 10Px 20Px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+
+       
+            #send-button:hover {
+                background-color: #0056b3;
+            }
+
+        .message {
+            margin-bottom: 12px;
+        }
+
+            .message .message-content {
+                display: inline-block;
+                padding: 10px;
+                border-radius: 4px;
+            }
+
+            .message.user .message-content {
+                background-color: #007bff;
+                color: white;
+                align-self: flex-end;
+            }
+
+            .message.bot .message-content {
+                background-color: #e0e0e0;
+                color: black;
+                align-self: flex-start;
+            }
+
+       
+
+        .DivWithScroll {
+            overflow-y: scroll;
+            overflow-x: hidden;
+           
+        }
+    </style>
+</head>
+<body style="background-color:#DDE1E5">
+    <div class="step-container" style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+        <div class="row" rowspan="2">
+            @* <img src="~/img/bgchat.jpg" /> *@
+            <div class="col-sm-4" style="height:535Px;background-image:url('/img/bgchat.jpg');background-repeat: no-repeat;background-size: 100% 100%;border-radius:8Px;">
+               @*  <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-button">Search</button>
+                </div> *@
+                @foreach (Messages u in result.USERIDS)
+
+                {
+                  
+
+                    <div class="row" style="cursor: pointer;background-color:lightskyblue;height:50Px;vertical-align:middle;margin:5Px;vertical-align:middle;">
+
+                        <div onclick="LoadChat('@u.USERID')" class="col-sm-12 " style="margin-bottom: 5px; vertical-align:middle;background-color:lightskyblue;">
+                            <p style="font-weight:bold;font-size:20Px;">@u.NAME</p>
+                        </div>
+                    </div>
+
+                    
+
+                }
+
+
+
+
+            </div>
+            <div class="col-sm-8 DivWithScroll" style="height:545Px;" id="chat-box">
+   @*  <div class="step-container">
+                <!-- Messages will appear here -->
+            </div> *@
+            <div class="col-sm-2">
+            </div>
+        </div>
+        <div class="row input-container " style="margin:5Px;">
+            <div class="col-sm-10" id="divMessageEntryArea1" style="display:none;">
+                <input type="text" style="width:100%; border-radius:5Px; height:45Px; border: 1px solid #ccc;" id="chat-input" placeholder="Type a message...">
+            </div>
+            <div class="col-sm-2" id="divMessageEntryArea2" style="display:none;">
+                <input type="hidden" id="hdnChildID" value="@Model.CHILDID" />
+                <input type="hidden" id="hdnUserID" value="@Model.USERID" />
+                <button id="send-button">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        document.getElementById('send-button').addEventListener('click', sendMessage);
+        document.getElementById('chat-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const chatBox = document.getElementById('chat-box');
+            const inputField = document.getElementById('chat-input');
+            const message = inputField.value.trim();
+
+            if (message === '') {
+                return;
+            }
+            debugger;
+            // User message
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user');
+            userMessage.innerHTML = `<div style="margin-left:30Px" class="message-content">${message}</div>`;
+            chatBox.appendChild(userMessage);
+
+            // Scroll to the bottom
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Clear input
+            var userid = document.getElementById('hdnUserID').value;
+            var childid = document.getElementById('hdnChildID').value;
+            AddMessages(userid, childid);
+            // Bot response (for simplicity, just echoing the message)
+            // setTimeout(() => {
+            //     const botMessage = document.createElement('div');
+            //     botMessage.classList.add('message', 'bot');
+            //     botMessage.innerHTML = `<div class="message-content">You said: ${message}</div>`;
+            //     chatBox.appendChild(botMessage);
+
+            //     // Scroll to the bottom
+            //     chatBox.scrollTop = chatBox.scrollHeight;
+            // }, 1000);
+        }
+
+        // function SearchUser() {
+        //     debugger;
+        //     var text = $('#txtSearch').val();
+        //     var UserID = $('#hdnUserID').val();
+
+        //     window.location.href = '/Home/Messages?ID=' + UserID + '&search=' + text;
+        // }
+
+        function AddMessages(USERID, CHILDID) {
+            const inputField = document.getElementById('chat-input');
+            const message = inputField.value.trim();
+
+            var fileData = new FormData();
+            fileData.append('USERID', USERID);
+            fileData.append('CHILDID', CHILDID);
+            fileData.append('MESSAGE', message);
+            var formURL = '/ChildProblem/AddMessages';
+
+            /* start ajax submission process */
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+                    debugger;
+                    const inputField = document.getElementById('chat-input');
+
+                    inputField.value = '';
+
+                    //alert(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    debugger;
+                    alert(errorThrown);
+                }
+
+            });
+        }
+
+        function LoadChat(userid) {
+            var childid = document.getElementById('hdnChildID').value;
+            document.getElementById('hdnUserID').value = userid;
+
+            var fileData = new FormData();
+            fileData.append('CHILDID', childid);
+            fileData.append('USERID', userid);
+
+            var formURL = '/ChildProblem/LoadMessagesData';
+
+            /* start ajax submission process */
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+                    debugger;
+
+                    const chatBox = document.getElementById('chat-box');
+                    chatBox.innerHTML = data;
+
+                    document.getElementById('divMessageEntryArea1').style.display = "block";
+                    document.getElementById('divMessageEntryArea2').style.display = "block";
+                    //alert(data);
+
+                    //alert(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    debugger;
+                    alert(errorThrown);
+                }
+
+            });
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

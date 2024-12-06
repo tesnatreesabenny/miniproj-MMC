@@ -1,0 +1,436 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.ResultModel
+@{
+    ResultModel result = Model;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Board</title>
+    <style>
+
+        .step-container {
+            display: flex;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20Px;
+            flex-direction: column;
+            /* align-items: center; */
+            margin: 50px auto;
+            /*  max-width: 800px; */
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        .tdmargin {
+            padding-left: 24px;
+            height: 25Px;
+        }
+
+        #btn {
+            background-color: rgb(27, 110,194);
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="step-container" id="divResult">
+        <input type="hidden" id="hdnChildID" value="@Model.CHILDID" />
+        <table style="width:100%;">
+            <tr>
+                <td>Name :</td>
+                <td>@Model.NAME</td>
+                <td>Referred By : </td>
+                <td>@Model.REFUSERID</td>
+            </tr>
+            <tr>
+                <td>Address : :</td>
+                <td>@Model.ADDRESS</td>
+                <td>Gender :  </td>
+                <td>@Model.GENDER</td>
+            </tr>
+            <tr>
+                <td>DOB :</td>
+                <td>@Model.DOB</td>
+                <td>Phone :</td>
+                <td>@Model.PHNO</td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td>@Model.EMAIL</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <script src="~/js/chart.js"></script>
+        <table style="width:100%">
+           
+                <tr>
+                    <td style="background-color:lightgrey; text-align:center;font-size:larger; font-weight:bold;">
+                        Results
+                    </td>
+                </tr>
+            <tr>
+               
+                @if (Convert.ToDouble(@result.EARNEPOINTS) >= 60)
+                {
+                    <td style="color:red;font-weight:bold">
+                        Points scored is @result.EARNEPOINTS <br />Based on our assessment, it appears that your child has a low likelihood of having dyscalculia.
+                    </td>
+
+                }
+                else if (Convert.ToDouble(@result.EARNEPOINTS) > 20)
+                {
+                    <td style="color:red;font-weight:bold">
+                        Points scored is @result.EARNEPOINTS <br />Based on our assessment, it appears that your child has a mild likelihood of having dyscalculia.
+                    </td>
+
+                }
+                else if (Convert.ToDouble(@result.EARNEPOINTS) <= 20)
+                {
+                    <td style="color:red; font-weight:bold">
+                        Points scored is @result.EARNEPOINTS <br />Based on our assessment, it appears that your child has a high likelihood of having dyscalculia.
+                    </td>
+
+                }
+               
+           </tr>
+        </table>
+
+        <table style="width:100% ;">
+
+            <tr>
+                <td style="background-color:lightgrey; text-align:center;font-size:larger; font-weight:bold;">
+                    Quesionnaire Result
+                </td>
+            </tr>
+            @foreach (QuestionnaireResult u2 in result.questionnaireResult)
+            {
+                <tr>
+                    <td class="tdmargin">
+                        @u2.SLNO  @u2.QUESTION
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdmargin" style="color:red">
+                        Answer : @u2.ANS
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdmargin">
+                    </td>
+                </tr>
+            }
+        </table>
+
+
+        <table style="width:100%">
+            <tr>
+                @*                 <td style="background-color:lightgrey; text-align:center; font-size:larger; font-weight:bold;">
+                Child Problems Test Result
+                </td> *@
+            </tr>
+            <tr>
+                <td>
+
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+
+                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            @foreach (ChildProblems u1 in result.childProblems)
+            {
+                <tr>
+                    <td class="tdmargin">
+                        @u1.QID  @u1.QUESTION
+                    </td>
+                </tr>
+
+
+
+                @if (@u1.IMAGEFIELD != "")
+                {
+                    <tr>
+                        <td class="tdmargin">
+                            <img src="~/img/questions/@u1.IMAGEFIELD" style="width:250Px;height:200Px" />
+                        </td>
+                    </tr>
+                }
+                @if (@u1.ANS == u1.CORRECTANS)
+                {
+                    <tr>
+                        <td class="tdmargin" style="color:red">
+                            Answer : @u1.ANSTEXT (Correct answer)
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td class="tdmargin" style="color:red">
+                            @u1.ANSTEXT (Wrong answer. Correct answer is @u1.CORRECTANSTEXT)
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td class="tdmargin">
+                    </td>
+                </tr>
+
+            }
+        </table>
+       
+
+
+
+        <table style="width:100%">
+            <tr>
+                <td style="background-color:lightgrey; text-align:center;font-size:larger; font-weight:bold;">
+                    White Board Test
+                </td>
+            </tr>
+            @foreach (WhiteBoard u in result.whiteBoard)
+            {
+                <tr>
+                    <td class="tdmargin">
+                        @u.WDQID  @u.QUESTION  @u.LETTER1@u.LETTER2 + @u.LETTER3@u.LETTER4 =
+                    </td>
+                </tr>
+
+                @if (@u.IMAGELOCATION != "")
+                {
+                    <tr>
+                        <td class="tdmargin">
+                            <img src="~/img/TestImages/@u.IMAGELOCATION" style="border-color:grey;border-width:1Pt;height:200Px;width:250Px" />
+                        </td>
+                    </tr>
+
+                }
+                <tr>
+                    <td class="tdmargin">
+                        Answer : @u.DESCRIPTION (Score : @u.SCORE)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdmargin">
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+   
+        <div class="row">
+            <div class="col-sm-3">
+
+                <button type="button" onclick="PrintChart();" id="btn" class="save-img">Print report</button>
+            </div>
+            @{
+                @inject IHttpContextAccessor HttpContextAccessor
+                var type2 = HttpContextAccessor.HttpContext.Session.GetString("USERTYPE");
+
+                if (type2 != null && type2 != "")
+                {
+                    if (type2 == "1")
+                    {
+                        <div class="col-sm-9" style="text-align:right">
+           
+                            <button type="button" onclick="goToNextPage()" id="btn" class="save-img">Next</button>
+                        </div>
+                    }
+                }
+             }
+        </div>
+    
+
+            
+        
+
+
+        @{
+            @inject IHttpContextAccessor HttpContextAccessor
+        var type1 = HttpContextAccessor.HttpContext.Session.GetString("USERTYPE");
+
+        if (type1 != null && type1 != "")
+        {
+            if (type1 == "2")
+
+            {
+                    <div class="row">
+
+                        <div style="height:20Px"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label class="input-label" for="txtmessage">Message:</label>
+                            <textarea class="form-control textarea4column" style="height:350Px" maxlength="5000" id="txtmessage"></textarea>
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div style="height:10Px"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12" style="align-items:center"><button type="button" onclick="AddMessages('@Model.REFUSERID.Trim()',@Model.CHILDID);" id="btn" class="save-img">Send</button></div>
+                    </div>
+
+            }
+        }
+    }
+    @*   Doctor:
+    <select class="input-field" id="ddlDoctor">
+    <option value="" selected="selected"></option>
+    @foreach (DoctorsList u in result.doctorsList)
+    {
+    <option value="@u.USERID">@u.NAME</option>
+    }
+    </select>
+    <button type="button" onclick="refer(@Model.CHILDID);" id="btn" class="save-img">Click to Refer</button> *@
+    <script>
+        window.onload = function () {
+            var strDefault = "";
+            var fileData = new FormData();
+            var CHILDID = document.getElementById('hdnChildID').value;
+            fileData.append('CHILDID', CHILDID);
+            var formURL = '/ChildProblem/LoadChildProblemChartdata';
+
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+
+                    DrawChart(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                    alert('Error occurred!');
+                }
+
+
+
+            });
+        }
+
+
+        function DrawChart(data) {
+            debugger;
+            var res = [];
+            var strrow = data.split('~');
+
+            strrow.forEach((item, index) => {
+                var strcol = item.split(',');
+                debugger;
+                res.push({
+                    x: parseInt(strcol[0]), y: parseInt(strcol[1]), label: strcol[2]
+                });
+            });
+
+            var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    title: {
+                        text: "Child Problem Test Result"
+                    },
+                    data: [
+
+                        {
+                            dataPoints: res// [
+                            //     { x: 1, y: 297571, label: 'Number Pattern' },
+                            //     { x: 2, y: 267017, label: 'Number comparison' },
+                            //     { x: 3, y: 175200, label: 'Numerical Ability' },
+                            //     { x: 4, y: 154580, label: 'Iran' }
+                            // ]
+                        }
+                    ]
+                });
+
+            chart.render();
+        }
+
+        function refer(CHILDID) {
+            window.location.href = '/Home/refer?ID=' + CHILDID;
+        }
+
+
+
+        function AddMessages(USERID, CHILDID) {
+            var MESSAGE = document.getElementById('txtmessage').value;
+
+            var fileData = new FormData();
+            fileData.append('USERID', USERID);
+            fileData.append('CHILDID', CHILDID);
+            fileData.append('MESSAGE', MESSAGE);
+            var formURL = '/ChildProblem/AddMessages';
+
+            /* start ajax submission process */
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+                    debugger;
+                    alert(data);
+                    window.location.href = '/Home/dashboard';
+                    
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    debugger;
+                    alert(errorThrown);
+                }
+
+            });
+        }
+
+
+        function PrintChart() {
+             let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+            debugger;
+            mywindow.document.write('<html><head><title>Result</title>');
+            mywindow.document.write('</head><body>');
+            mywindow.document.write(document.getElementById('divResult').innerHTML);
+             mywindow.document.write('</body></html>');
+            
+             mywindow.document.close(); // necessary for IE >= 10
+             mywindow.focus(); // necessary for IE >= 10*/
+
+             mywindow.print();
+             mywindow.close();
+
+            return true;
+        }
+        
+        function goToNextPage() {
+            var CHILDID = document.getElementById('hdnChildID').value;
+            window.location.href = '/Home/levels?id='+CHILDID;
+        }
+
+
+    </script>
+
+
+</body>
+</html>

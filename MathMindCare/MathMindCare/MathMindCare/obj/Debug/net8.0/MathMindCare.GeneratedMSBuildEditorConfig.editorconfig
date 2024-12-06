@@ -1,0 +1,135 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MathMindCare
+build_property.RootNamespace = MathMindCare
+build_property.ProjectDir = D:\MathMindCare\MathMindCare\MathMindCare\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\MathMindCare\MathMindCare\MathMindCare
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/addchild.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZGRjaGlsZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/ChildProblems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlsZFByb2JsZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Doctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/DoctorInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N0b3JJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Instructions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbnN0cnVjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/InstructionsWB.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbnN0cnVjdGlvbnNXQi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/levels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsZXZlbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/ManageQuestionnaire.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYW5hZ2VRdWVzdGlvbm5haXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/ManageUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYW5hZ2VVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Messages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZXNzYWdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Noline.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb2xpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Practice1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmFjdGljZTEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Practice3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmFjdGljZTMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/ProfileEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Questionnaire.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWVzdGlvbm5haXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/refer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWZlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/traininglevels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0cmFpbmluZ2xldmVscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Home/Whiteboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXaGl0ZWJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MathMindCare/MathMindCare/MathMindCare/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-uv0zekfvpc

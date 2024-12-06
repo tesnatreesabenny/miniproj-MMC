@@ -1,0 +1,103 @@
+﻿@{
+
+}
+
+
+<title>User Profile Creation</title>
+<style>
+
+
+    .container {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 18px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 6px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    button[type="button"] {
+        margin-top: 6px;
+        width: 100%;
+        padding: 5px;
+        background-color: rgb(27, 110,194);
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+        button[type="button"]:hover {
+            background-color: rgb(27, 110,180);
+        }
+</style>
+
+<script src="~/js/users.js"></script>
+<body style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+<div class="container">
+    <h2>User Profile Creation</h2>
+    <h6>Create account as:</h6>
+        <div class="row">
+            <div class="col-sm-1">
+                <input type="radio" id="rdoparentTeacher" name="role" checked>
+            </div>
+            <div class="col-sm-5">
+                <label for="parentTeacher">Parent/Teacher</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="radio" id="rdodoctor" name="role">
+            </div>
+            <div class="col-sm-5">
+                <label for="doctor">Doctor</label><br>
+            </div>
+
+        </div>
+    <div>
+        <label for="username">Username:<span style="color: red;">*</span></label>
+        <input type="text" id="username" name="username" required />
+    </div>
+    <div>
+        <label for="password">Password:<span style="color: red;">*</span></label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <div>
+        <label for="name">Name:<span style="color: red;">*</span></label>
+        <input type="text" id="name" name="name" required />
+    </div>
+    <div>
+        <label for="email">Email:<span style="color: red;">*</span></label>
+        <input type="email" id="email" name="email" required />
+    </div>
+    
+    <div>
+        <label for="phone">Phone:<span style="color: red;">*</span></label>
+        <input type="tel" id="phone" name="phone" required />
+    </div>
+    <div>
+        <button type="button" onclick="JSAddUser();">Create Profile</button>
+    </div>
+</div>
+</body>

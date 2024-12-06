@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Number Line Game</title>
+    <style>
+        body {
+            margin: 0;
+/*             background: #dddddd;
+            font-family: Arial, sans-serif; */
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: #f0f0f0;
+            position: relative;
+           
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+            .controls button {
+                margin-left: 10px;
+            }
+
+        .number-line-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+            .number-line-container::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                height: 2px;
+                background: #000;
+            }
+
+        .number-line {
+            display: flex;
+            justify-content: center;
+        }
+
+            .number-line .square {
+                width: 60px;
+                height: 60px;
+                border: 1px solid #000;
+                margin: 0 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                position: relative;
+                z-index: 1;
+            }
+
+        .numbers {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+            .numbers .number {
+                width: 60px;
+                height: 60px;
+                margin: 0 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #4CAF50;
+                color: #fff;
+                font-size: 24px;
+                cursor: grab;
+                user-select: none;
+            }
+
+        #message {
+            font-size: 18px;
+            color: #4CAF50;
+        }
+
+        #custom-sequence-input {
+            display: none;
+            margin-top: 20px;
+            margin-bottom: 20Px;
+            width: 300Px;
+        }
+
+        #nextButton {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+           /*  font-size: 16px;
+            cursor: pointer;
+    */         display: none;
+          /*   border: none;
+            background: none;
+            background-color: rgb(27, 110,194); */
+            ;
+           /*  color: white; */
+        }
+
+        .btn {
+            background-color: rgb(27, 110,194);
+            /* color: white; */
+            padding: 10Px 20Px;
+            border: none;
+            border-radius: 6Px;
+            cursor: pointer;
+        }
+
+        .arrow-icon {
+            width: 26Px;
+            height: 26Px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Line Game</h1>
+        <div class="controls">
+            <label for="sequence">Choose Sequence:</label>
+            <select id="sequence">
+                <option value="even">Even Numbers</option>
+                <option value="odd">Odd Numbers</option>
+                <option value="custom">Custom</option>
+            </select>
+            <input type="text" id="custom-sequence-input" placeholder="Enter numbers separated by comma">
+            <button id="start-button">Start Game</button>
+            <button id="reset-button">Reset</button>
+        </div>
+        <div class="number-line-container">
+            <div class="number-line" id="number-line">
+                <!-- Number line will be dynamically generated here -->
+            </div>
+        </div>
+        <div class="numbers" id="numbers">
+            <!-- Numbers to be dragged will be dynamically generated here -->
+        </div>
+        <div id="message"></div>
+       
+        <button id="nextButton" class="btn" Onclick="nextpage()">
+            Next
+            <img src="~/img/arrow1.png" class="arrow-icon">
+        </button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const numberLine = document.getElementById('number-line');
+            const numbersContainer = document.getElementById('numbers');
+            const startButton = document.getElementById('start-button');
+            const resetButton = document.getElementById('reset-button');
+            const sequenceSelect = document.getElementById('sequence');
+            const message = document.getElementById('message');
+            const customSequenceInput = document.getElementById('custom-sequence-input');
+            const nextButton = document.getElementById('nextButton');
+
+            let pattern = [];
+            let numbersToPlace = [];
+            let sequenceType = 'even';
+
+            sequenceSelect.addEventListener('change', () => {
+                if (sequenceSelect.value === 'custom') {
+                    customSequenceInput.style.display = 'block';
+                } else {
+                    customSequenceInput.style.display = 'none';
+                }
+            });
+
+            function generatePattern() {
+                pattern = [];
+                switch (sequenceType) {
+                    case 'even':
+                        for (let i = 2; i <= 18; i += 2) {
+                            pattern.push(i);
+                        }
+                        break;
+                    case 'odd':
+                        for (let i = 1; i <= 17; i += 2) {
+                            pattern.push(i);
+                        }
+                        break;
+                    case 'custom':
+                        const customSequence = customSequenceInput.value.split(',').map(Number);
+                        pattern = customSequence;
+                        break;
+                }
+                numbersToPlace = [...pattern];
+                shuffle(numbersToPlace);
+            }
+
+            function shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            function generateNumberLine() {
+                numberLine.innerHTML = '';
+                pattern.forEach(() => {
+                    const square = document.createElement('div');
+                    square.classList.add('square');
+                    numberLine.appendChild(square);
+                });
+            }
+
+            function generateNumbers() {
+                numbersContainer.innerHTML = '';
+                numbersToPlace.forEach(number => {
+                    const numberDiv = document.createElement('div');
+                    numberDiv.classList.add('number');
+                    numberDiv.textContent = number;
+                    numberDiv.setAttribute('draggable', true);
+                    numberDiv.addEventListener('dragstart', handleDragStart);
+                    numbersContainer.appendChild(numberDiv);
+                });
+            }
+
+            function handleDragStart(e) {
+                e.dataTransfer.setData('text/plain', e.target.textContent);
+            }
+
+            function handleDrop(e) {
+                e.preventDefault();
+                const droppedNumber = e.dataTransfer.getData('text/plain');
+                if (e.target.classList.contains('square') && e.target.textContent === '') {
+                    e.target.textContent = droppedNumber;
+                    removeNumberFromList(droppedNumber);
+                    checkCompletion();
+                }
+            }
+
+            function handleDragOver(e) {
+                e.preventDefault();
+            }
+
+            function removeNumberFromList(number) {
+                const numberDivs = document.querySelectorAll('.numbers .number');
+                numberDivs.forEach(numberDiv => {
+                    if (numberDiv.textContent === number) {
+                        numberDiv.remove();
+                    }
+                });
+            }
+
+            function checkCompletion() {
+                const squares = document.querySelectorAll('.number-line .square');
+                if (Array.from(squares).some(square => square.textContent === '')) {
+                    return; // Not yet completed
+                }
+
+                let completed = true;
+                squares.forEach((square, index) => {
+                    if (parseInt(square.textContent) !== pattern[index]) {
+                        completed = false;
+                    }
+                });
+
+                if (completed) {
+                    message.textContent = 'Well done! You completed the sequence!';
+                    nextButton.style.display = 'block';
+                } else {
+                    message.textContent = 'Incorrect sequence, try again.';
+                }
+            }
+
+            function resetGame() {
+                message.textContent = '';
+                nextButton.style.display = 'none';
+                generatePattern();
+                generateNumberLine();
+                generateNumbers();
+            }
+
+            numberLine.addEventListener('drop', handleDrop);
+            numberLine.addEventListener('dragover', handleDragOver);
+
+            startButton.addEventListener('click', () => {
+                sequenceType = sequenceSelect.value;
+                resetGame();
+            });
+            nextButton.addEventListener('click', nextpage);
+
+            resetButton.addEventListener('click', resetGame);
+
+            function nextpage(){
+                window.location.href = '/Home/traininglevels';
+            }
+
+            // Initial setup
+             resetGame();
+        });
+    </script>
+</body>
+</html>

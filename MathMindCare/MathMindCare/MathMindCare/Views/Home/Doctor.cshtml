@@ -1,0 +1,259 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.DoctorProfile
+@{
+    DoctorProfile result = Model;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 9px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+    <div class="container">
+        <h1>Doctor Profile</h1>
+       
+        <form id="doctorForm">
+
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="txtname" value="@Model.NAME" name="name" required><br><br>
+            </div>
+            <div>
+                <label for="expertise">Specialization:</label>
+                <input type="text" id="txtexpertise" value="@Model.SPECIALIZATION" name="expertise" required><br><br>
+            </div>
+
+            <div>
+                 <label for="experience">Experience (years):</label>
+                <input type="number" id="txtexperience" value="@Model.EXPERIENCE" min="0" max="25" name="experience" required><br><br>
+             </div>
+            <div>
+            <label for="hospital">Clinic Address:</label>
+                <textarea id="txthospital" name="hospital" rows="4" required>@Model.CLINICADDRESS</textarea><br><br>
+            </div>
+            
+            <div>
+            <label for="address">Your Address:</label>
+                <textarea id="txtaddress" name="address" rows="4" required>@Model.ADDRESS </textarea><br><br>
+            </div>
+            <div>
+            <label for="phone">Phone:</label>
+                <input type="tel" id="txtphone" value="@Model.PHONE" name="phone" required><br><br>
+            </div>
+            <div>
+            <label for="email">Email:</label>
+                <input type="email" id="txtemail" value="@Model.EMAILID" name="email" required><br><br>
+            </div>
+            <div>
+                @if (Model.PHOTO == "")
+                {
+                    <img id="imgPhoto" width="100Px" height="100Px" src="../img/noimages.jpg" />
+                }
+                else
+                {
+                    <img id="imgPhoto" width="100Px" height="100Px" src="@Model.PHOTO" />
+
+                }
+                <label for="photo">Upload Your Photo:</label>
+                <input type="file" id="filephoto" onchange="readURL(this)" name="filephoto"><br><br>
+            </div>
+            <div style="display:none">
+                <textarea id="txtimagedata" name="txtimagedata">@Model.PHOTO</textarea><br><br>
+            </div>
+
+            <div>
+                <button onclick="JSDoctorProfile()" type="button">Create Profile</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function readURL(input) {
+            debugger;
+            if (input.files && input.files[0]) {
+                // var reader = new FileReader();
+
+                // reader.onload = function (e) {
+                //     $('#imgPhoto').attr('src', e.target.result);
+                // }
+
+                // reader.readAsDataURL(input.files[0]);
+                uploadImage();
+                
+            }
+        }
+        const convertBase64 = (file) => {
+            return new Promise((resolve, reject) => {
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(file);
+
+                fileReader.onload = () => {
+                    resolve(fileReader.result);
+                };
+
+                fileReader.onerror = (error) => {
+                    reject(error);
+                };
+            });
+        };
+
+        const uploadImage = async (event) => {
+            debugger;
+            const file = document.getElementById("filephoto").files[0];
+            const base64 = await convertBase64(file);
+            //avatar.src = base64;
+            var textArea = document.getElementById("txtimagedata");
+            var img = document.getElementById("imgPhoto");
+            img.src = base64;
+            textArea.innerText = base64;
+        };
+
+
+        function JSDoctorProfile() {
+            debugger;
+            var fileData = new FormData();
+
+           // var UserID = $('#hdnID').val();
+            var UserID = $('#txtuserid').val();
+            var Name = $('#txtname').val();
+            var Specialization = $('#txtexpertise').val();
+            var Experience = $('#txtexperience').val();
+            var HospitalAddr = $('#txthospital').val();
+            var Address = $('#txtaddress').val();
+            var Phone = $('#txtphone').val();
+            var Email = $('#txtemail').val();
+            var image = $('#txtimagedata').val();
+
+            $('#txtimagedata').val('');
+            debugger;
+            
+            
+
+            // if (!Name || !DOB || !Gender || !Address || !Phone || !Email) {
+            //     alert("All fields are mandatory!");
+            //     return;
+            // }
+
+            // if (!Email.endsWith(".com")) {
+            //     alert("Write valid email!");
+            //     return;
+            // }
+
+            // if (Phone.length !== 10) {
+            //     alert("Phone number must be exactly 10 characters long!");
+            //     return;
+            // }
+
+            // if (ChildID == "")
+            //     ChildID = 0;
+            fileData.append('USERID', UserID);
+            fileData.append('SPECIALIZATION', Specialization);
+            fileData.append('EMAILID', Email);
+
+            fileData.append('CLINICADDRESS', HospitalAddr);
+            fileData.append('ADDRESS', Address);
+            fileData.append('NAME', Name);
+            fileData.append('PHONE', Phone);
+            fileData.append('PHOTO', image);
+            fileData.append('EXPERIENCE', Experience);
+            
+            debugger;
+
+            //fileData.append('imageData', image);
+
+            // for (var i = 0; i < files.length; i++) {
+            //     fileData.append('imagefile', files[i]);
+            // }
+            
+
+            var formURL = '/DoctorProf/Profile';
+
+            /* start ajax submission process */
+            $.ajax({
+                url: formURL,
+                type: "POST",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data, textStatus, jqXHR) {
+
+                    debugger;
+                    alert(data);
+                    //    if (data == 'OK') {
+                    //        alert("Login Success");
+                    window.location.href = '/Home/dashboard';
+
+                    //    }
+                    //    else {
+
+                    //        alert("Login Failed");
+                    //    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    debugger;
+                    alert(errorThrown);
+                }
+
+            });
+        }
+    </script>
+</body>
+</html>
+

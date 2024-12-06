@@ -1,0 +1,96 @@
+﻿@using MathMindCare.Models;
+
+@model MathMindCare.Models.Users
+@{
+    Users result = Model;
+}
+
+
+<title>Edit Password</title>
+<style>
+
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    button[type="button"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    } */
+
+    input[type="text"],
+    input[type="password"],
+    button[type="button"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    button[type="button"] {
+        background-color: rgb(27, 110,194);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+        button[type="button"]:hover {
+            background-color: rgb(27, 110,180);
+        }
+</style>
+
+<script src="~/js/users.js"></script>
+<body style="background-image: url('/img/bglogin1.jpg');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+<div class="container">
+    <input type="hidden" value="@Model.PASSWORD" id="hdbpwd" />
+    <h2>Change password</h2>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value=@Model.USERID disabled  />
+    </div>
+    <div>
+        <label for="oldpsd">Existing Password:</label>
+        <input type="password" id="oldpsd" name="oldpsd" required />
+    </div>
+    <div>
+        <label for="npsd">New Password:</label>
+        <input type="password" id="npsd" name="npsd" required />
+    </div>
+    <div>
+        <label for="cpsd">Confirm New Password:</label>
+        <input type="password" id="cpsd" name="cpsd" required />
+    </div>
+
+
+    <div>
+        <button type="button" onclick="JSChangepwd()">Submit</button>
+    </div>
+</div>
+</body>
